@@ -45,11 +45,11 @@ plotting(output)
 ## GENERAL
 
 - Model is introduced in:
-..- Orth, Koster, Seneviratne 2013, J.Hydrometeorol. (based on Koster and Mahanama, 2012, J.Hydrometeorol.)
+⋅⋅* Orth, Koster, Seneviratne 2013, J.Hydrometeorol. (based on Koster and Mahanama, 2012, J.Hydrometeorol.)
 
 - Modifications to the model described in 
-..- Orth et al. 2015, J.Hydrol [update to snow module]
-..- Orth and Seneviratne, 2015, ERL [accounting for dew formation]
+⋅⋅* Orth et al. 2015, J.Hydrol [update to snow module]
+⋅⋅* Orth and Seneviratne, 2015, ERL [accounting for dew formation]
 
 ### INPUT FOR SWBM
 - Precipitation
@@ -65,10 +65,10 @@ plotting(output)
 ### METHODS TO CALIBRATE SWBM:
 
 - local-scale: using streamflow observations from near-natural (usually rather small) catchments
-..- applied in Orth et al. 2015, J.Hydrol & Orth and Seneviratne, 2014, Clim.Dyn & Orth et al. 2013, J.Hydrometeorol.
+⋅⋅* applied in Orth et al. 2015, J.Hydrol & Orth and Seneviratne, 2014, Clim.Dyn & Orth et al. 2013, J.Hydrometeorol.
 - continental-scale: using multiple hydrological reference datasets
-..- applied in Orth and Seneviratne, 2015, ERL & Orth et al., 2016, Scientific Reports 
+⋅⋅* applied in Orth and Seneviratne, 2015, ERL & Orth et al., 2016, Scientific Reports 
 
 - continental-scale calibration (applicable all over Europe): 
-..- exp_runoff = 3.89, exp_et = 1.14, beta = 0.674 (maximum of normalized ET function), whc = 970.5 [mm], melting = 10.39 [mm snow water equivalent per degreee C above 1 deg C]
+⋅⋅* exp_runoff = 3.89, exp_et = 1.14, beta = 0.674 (maximum of normalized ET function), whc = 970.5 [mm], melting = 10.39 [mm snow water equivalent per degreee C above 1 deg C]
 
