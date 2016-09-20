@@ -35,7 +35,7 @@ source('plotting.R')
 
 Default parameters 
 ```R
-output=simplemodel(exp_runoff=6.4,exp_et=0.06,beta=0.66, whc=220, melting=3)
+output = simplemodel( exp_runoff=6.4,exp_et=0.06,beta=0.66, whc=220, melting=3)
 str(output)
 plotting(output)
 ```
