@@ -85,7 +85,7 @@ summer[m+l*365]=1
 }}
 
 ## add histogram into functions plot
-soilm_default=read.table('/net/firebolt/data/orthr/SWBModel/Data/SoilMoisture_SimpleModel_Payerne_1998-2012')[,4]
+soilm_default=read.table('./Data/SoilMoisture_SimpleModel_Payerne_1998-2012')[,4]
 histo=hist(soilm_default*summer,plot=F,breaks=11)
 barplot(c(0,histo$counts/(1.5*max(histo$counts))),c(histo$breaks[1],rep(20,13)),
 space=0,add=T,col='grey85',border=F)
@@ -158,7 +158,7 @@ if(modified){lines(list$soilmoisture[3651:list$length],lwd=2,col=3)}
 ## read observed soil moisture
 soilm_obs=array(NaN,c(list$length))
 
-s=read.table('/net/firebolt/data/orthr/SWBModel/Data/PAY_SM_2008-12.txt',skip=16)
+s=read.table('./Data/PAY_SM_2008-12.txt',skip=16)
 co=3870
 for (i in seq(1,1606*24,24)){
 soilm_obs[co]=(7.5*mean(s[i:(i+23),7])+12.5*mean(s[i:(i+23),8])+

@@ -1,5 +1,5 @@
 # Documentation of Simple Water Balance Model (SWBM)
-## Rene Orth, 14 July 2016
+### Rene Orth, 14 July 2016
 
 
 - R code of the model is provided in simplemodel.R
@@ -25,7 +25,13 @@
 ```
 
 
-## Example, run SWBM at site Payerne, after functions from simplemodel.R and plotting.R have been loaded
+## Example to run SWBM at site Payerne
+
+Load functions of SWBM
+```R
+source('simplemodel.R')
+source('plotting.R')
+```
 
 Default parameters 
 ```R
@@ -41,7 +47,7 @@ plotting(output)
 ```
 
 
-## GENERAL
+## General
 
 - Model is introduced in:
   * Orth, Koster, Seneviratne 2013, J.Hydrometeorol. (based on Koster and Mahanama, 2012, J.Hydrometeorol.)
@@ -50,18 +56,18 @@ plotting(output)
   * Orth et al. 2015, J.Hydrol [update to snow module]
   * Orth and Seneviratne, 2015, ERL [accounting for dew formation]
 
-### INPUT FOR SWBM
+### Input for SWBM
 - Precipitation
 - Net Radiation
 - Temperature
 
-### OUTPUT OF SWBM
+### Output of SWBM
 - Soil Moisture
 - Runoff
 - Evapotranspiration
 - Snow Water Equivalent
 
-### METHODS TO CALIBRATE SWBM:
+### Methods to calibrate SWBM:
 
 - local-scale: using streamflow observations from near-natural (usually rather small) catchments
   * applied in Orth et al. 2015, J.Hydrol & Orth and Seneviratne, 2014, Clim.Dyn & Orth et al. 2013, J.Hydrometeorol.

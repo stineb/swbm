@@ -15,9 +15,9 @@ temp=array(NaN,c(length))
 precip=array(NaN,c(length))
 rad=array(NaN,c(length))
 
-temp[]=t(read.table('/net/firebolt/data/orthr/SWBModel/Data/pay_meteo_1998-2012.txt',skip=10,header=T)[1:5475,7])
-precip[]=t(read.table('/net/firebolt/data/orthr/SWBModel/Data/pay_meteo_1998-2012.txt',skip=10,header=T)[1:5475,9])
-rad[]=t(read.table('/net/firebolt/data/orthr/SWBModel/Data/pay_meteo_1998-2012.txt',skip=10,header=T)[1:5475,8])
+temp[]=t(read.table('./Data/pay_meteo_1998-2012.txt',skip=10,header=T)[1:5475,7])
+precip[]=t(read.table('./Data/pay_meteo_1998-2012.txt',skip=10,header=T)[1:5475,9])
+rad[]=t(read.table('./Data/pay_meteo_1998-2012.txt',skip=10,header=T)[1:5475,8])
 
 # Scaling solar radiation to approximate net radiation
 rad=rad*0.65-35
