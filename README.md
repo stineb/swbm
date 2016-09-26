@@ -3,11 +3,11 @@
 
 
 - R code of the model is provided in simplemodel.R
-.. - SWBM set up to compute hydrology at site Payerne
-.. - sections concerning delayed runoff are commented out
-.. - the delyed runoff requires an additional parameter and takes more time to compute
-.. - it is required if daily runoff should be analyzed
-.. - it is not required if the focus is on soil moisture, ET, or monthly runoff
+  - SWBM set up to compute hydrology at site Payerne
+  - sections concerning delayed runoff are commented out
+  - the delyed runoff requires an additional parameter and takes more time to compute
+  - it is required if daily runoff should be analyzed
+  - it is not required if the focus is on soil moisture, ET, or monthly runoff
 
 - R code of to plot simple model output is provided in figures.R
 
@@ -33,16 +33,16 @@ source('simplemodel.R')
 source('plotting.R')
 ```
 
-Default parameters 
+Execute model with default parameters and create standard plots (make sure to create directory `./fig` beforehand)
 ```R
-output = simplemodel( exp_runoff=6.4,exp_et=0.06,beta=0.66, whc=220, melting=3)
+output = simplemodel( exp_runoff=6.4,exp_et=0.06,beta=0.66, whc=220, melting=3 )
 str(output)
 plotting(output)
 ```
 
-Changed parameters
+Execute model with  changed parameters and create standard plots
 ```R
-output=simplemodel(exp_runoff=2.4,exp_et=0.06,beta=0.86, whc=220, melting=3)
+output=simplemodel(exp_runoff=2.4,exp_et=0.06,beta=0.86, whc=220, melting=3 )
 plotting(output)
 ```
 

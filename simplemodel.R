@@ -1,6 +1,8 @@
 ######################################################################################################
 ################################## SIMPLE WATER BALANCE MODEL ########################################
 ######################################################################################################
+# Code by Rene Orth, passed on to Beni Stocker, July 2016
+
 
 simplemodel <- function ( exp_runoff, exp_et, beta, whc, melting ) {
   
@@ -172,8 +174,9 @@ simplemodel <- function ( exp_runoff, exp_et, beta, whc, melting ) {
   
   #############################################################################################################
 
-  list <- list(soilm,runoff,et,snow,exp_runoff,exp_et,beta,whc,melting,length)
-  names(list) <- c('soilmoisture','runoff','evapotranspiration','snow','exp_runoff','exp_et','beta','whc','melting','length')
+  list <- list( soilm, runoff, et, snow, exp_runoff, exp_et, beta, whc, melting, length )
+  names(list) <- c( 'soilmoisture', 'runoff', 'evapotranspiration', 'snow', 'exp_runoff', 'exp_et', 'beta', 'whc', 'melting', 'length' )
+
   return(list)
 
 }
