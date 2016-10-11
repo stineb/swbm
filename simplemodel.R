@@ -8,6 +8,9 @@ simplemodel <- function ( exp_runoff, exp_et, beta, whc, melting ) {
   
   library('fields')
 
+  ## parameters
+  secs_per_day <- 86400
+
 
   ##################### read forcing data for site Payerne ####################################################
   length <- 5475
@@ -22,8 +25,9 @@ simplemodel <- function ( exp_runoff, exp_et, beta, whc, melting ) {
   # Scaling solar radiation to approximate net radiation (xxx ref? xxx)
   rad <- rad * 0.65 - 35.0
 
-  # convert radiation into mm
-  rad <- rad * 86400 / 2260000
+  # convert radiation into mm water equivalent.
+  # conversion from (W s-1) to (W d-1)
+  rad <- rad * secs_per_day / 2260000
 
   #############################################################################################################
 
@@ -65,9 +69,9 @@ simplemodel <- function ( exp_runoff, exp_et, beta, whc, melting ) {
           snow_current <- snow_current + precip[i]
           precip[i]    <- 0.0
         } else {
-          fsnow        <- ( temp[i] - ( temp_grenze - 1.0 ) ) / 2.0
-          snow_current <- snow_current + precip[i] * ( 1.0 - fsnow )
-          precip[i]    <- precip[i] * fsnow
+          frain        <- ( temp[i] - ( temp_grenze - 1.0 ) ) / 2.0
+          snow_current <- snow_current + precip[i] * ( 1.0 - frain )
+          precip[i]    <- precip[i] * frain
         }
 
       }
@@ -153,7 +157,7 @@ simplemodel <- function ( exp_runoff, exp_et, beta, whc, melting ) {
     infiltration[i-1] <- ( 1.0 - min( 1.0,( ( soilm[i-1] / whc) ^ exp_runoff ) ) ) * precip[i-1]
 
     ## calculate derivative of infiltration w.r.t. soil moisture
-    infiltration_corr[i-1] <- (-1) * min( max( 0, whc - soilm[i-1] ), ( exp_runoff / whc ) ) * ( ( soilm[i-1] / whc ) ^ ( exp_runoff - 1.0 ) ) * precip[i-1]
+    infiltration_corr[i-1] <- (-1.0) * min( max( 0.0, whc - soilm[i-1] ), ( exp_runoff / whc ) ) * ( ( soilm[i-1] / whc ) ^ ( exp_runoff - 1.0 ) ) * precip[i-1]
 
     ## XXX is 5.0 a permanent wilting point parameter?
     et[i-1] <- min( et[i-1], soilm[i-1] - 5.0 )

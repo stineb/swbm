@@ -2,7 +2,7 @@
 Zeitangaben in UTC 0040 (UTC)  =  01:40 Uhr Winterzeit  =  02:40 Uhr Sommerzeit
 Auswahlperiode: 01.01.1998 00:00  -  31.12.2012 23:50 UTC 32767 -> Keine Angabe
 Anzahl Stationen  1
-    32	Payerne                  490 m.?.M.	562150/ 184855
+    32	Payerne                  490 m.?.M.	562150/ 184855 = 46.81384 N 6.94273 E
 Anzahl Parameter  3
    211  Lufttemperatur 2 m über Boden; Tagesmittel  [°C]
    224  Globalstrahlung; Tagesmittel  [W/m²]

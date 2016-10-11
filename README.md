@@ -35,14 +35,14 @@ source('plotting.R')
 
 Execute model with default parameters and create standard plots (make sure to create directory `./fig` beforehand)
 ```R
-output = simplemodel( exp_runoff=6.4,exp_et=0.06,beta=0.66, whc=220, melting=3 )
+output = simplemodel( exp_runoff=6.4, exp_et=0.06, beta=0.66, whc=220, melting=3 )
 str(output)
 plotting(output)
 ```
 
 Execute model with  changed parameters and create standard plots
 ```R
-output=simplemodel(exp_runoff=2.4,exp_et=0.06,beta=0.86, whc=220, melting=3 )
+output=simplemodel( exp_runoff=2.4, exp_et=0.06, beta=0.86, whc=220, melting=3 )
 plotting(output)
 ```
 
